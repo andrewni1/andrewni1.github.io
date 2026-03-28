@@ -532,8 +532,126 @@
     color: var(--accent);
   }
 
+  /* Projects */
+  #projects { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2px;
+  }
+
+  .project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 40px 44px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+  }
+  .project-card:hover {
+    border-color: rgba(196,171,128,0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.15);
+  }
+
+  .project-card-bg {
+    position: absolute;
+    bottom: -20px; right: -20px;
+    width: 180px; height: 180px;
+    color: var(--accent);
+    opacity: 0.04;
+    pointer-events: none;
+  }
+
+  .project-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+  .project-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.6rem;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .project-links {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+  .project-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px; height: 32px;
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    color: var(--muted);
+    transition: color 0.2s, border-color 0.2s;
+    text-decoration: none;
+  }
+  .project-link:hover {
+    color: var(--accent);
+    border-color: rgba(196,171,128,0.5);
+  }
+  .project-link svg { width: 15px; height: 15px; }
+
+  .project-tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--accent);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .project-bullets {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+  .project-bullets li {
+    font-size: 0.88rem;
+    color: var(--muted);
+    line-height: 1.6;
+    padding-left: 16px;
+    position: relative;
+  }
+  .project-bullets li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+
+  .project-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .project-stack-tag {
+    padding: 3px 10px;
+    border: 1px solid var(--border);
+    font-family: 'DM Mono', monospace;
+    font-size: 0.63rem;
+    color: var(--muted);
+    border-radius: 1px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  @media (max-width: 768px) {
+    .project-grid { grid-template-columns: 1fr; }
+    .project-card { padding: 28px 24px; }
+  }
+
   /* Education */
-  #education { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  #education { border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
   .edu-card {
     display: grid;
@@ -1083,6 +1201,7 @@
   <ul class="nav-links">
     <li><a href="#experience">Work</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="AndrewNiResume.pdf" download class="nav-resume"><i data-lucide="file-down"></i> Resume</a></li>
@@ -1455,10 +1574,51 @@
   </div>
 </section>
 
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-header reveal">
+    <span class="section-num-icon"><span class="section-num">03</span><i data-lucide="folder-git-2"></i></span>
+    <h2 class="section-title">Projects</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="project-grid">
+    <div class="project-card reveal">
+      <svg class="project-card-bg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="0.8" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+      </svg>
+      <div class="project-header">
+        <div class="project-title">Job Application Tracker</div>
+        <div class="project-links">
+          <a href="https://github.com/andrewni1/job-tracker" target="_blank" class="project-link" aria-label="GitHub repo">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="project-tagline">Local-first · LinkedIn Auto-Scrape · Analytics</div>
+      <ul class="project-bullets">
+        <li>Built a local-first job tracker that auto-scrapes LinkedIn listings — paste a URL and it extracts title, company, location, salary, and description instantly.</li>
+        <li>Tracks applications through a full status pipeline (Applied → Interviewing → Offer/Rejected) with inline editing, duplicate detection, and CSV export.</li>
+        <li>Designed an analytics dashboard with Chart.js visualizations — status funnel, weekly activity, monthly trends, top companies, and location breakdowns.</li>
+        <li>Implemented keyboard shortcuts, stale-application indicators, toast notifications, and responsive WCAG 2.2 AA accessible design.</li>
+      </ul>
+      <div class="project-stack">
+        <span class="project-stack-tag">Python</span>
+        <span class="project-stack-tag">FastAPI</span>
+        <span class="project-stack-tag">HTMX</span>
+        <span class="project-stack-tag">Tailwind CSS</span>
+        <span class="project-stack-tag">SQLite</span>
+        <span class="project-stack-tag">Chart.js</span>
+        <span class="project-stack-tag">BeautifulSoup</span>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- EDUCATION -->
 <section id="education">
   <div class="section-header reveal">
-    <span class="section-num-icon"><span class="section-num">03</span><i data-lucide="graduation-cap"></i></span>
+    <span class="section-num-icon"><span class="section-num">04</span><i data-lucide="graduation-cap"></i></span>
     <h2 class="section-title">Education</h2>
     <div class="section-line"></div>
   </div>
