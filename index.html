@@ -801,6 +801,9 @@
     0%   { transform: scale(0.7); opacity: 0.9; }
     100% { transform: scale(2.2); opacity: 0; }
   }
+  .timeline-dot.pulse.jpmc-pulse::after {
+    border-color: #8BB4D6;
+  }
   .timeline-label {
     position: absolute;
     display: flex;
@@ -1221,7 +1224,7 @@
   <h1>Andrew<br><em>Ni</em></h1>
   <div class="hero-sub">
     <p class="hero-desc">
-      <strong>Building systems that scale.</strong> From high-concurrency enterprise platforms at Walmart Global Tech to real-time data pipelines processing 40M+ records — I engineer software that moves fast and holds.
+      <strong>Building systems that scale.</strong> Currently at JPMorgan Chase building enterprise financial systems. Previously at Walmart Global Tech scaling high-concurrency platforms and real-time data pipelines processing 40M+ records.
     </p>
     <div class="hero-cta">
       <a href="#contact" class="btn btn-primary">Get in touch →</a>
@@ -1267,80 +1270,121 @@
     <div class="section-line"></div>
   </div>
 
-  <!-- TIMELINE: proportional, Sep 2020 – Present (66 months total) -->
+  <!-- TIMELINE: proportional, Sep 2020 – Present (70 months total) -->
   <div class="timeline-bar reveal">
     <div class="timeline-track"></div>
 
     <!-- Segments -->
-    <!-- Purdue HTF  Sep 2020–May 2021  0% → 12.1% -->
-    <div class="timeline-segment" data-target="exp-htf" style="left:0%;width:12.1%;background:var(--muted);opacity:0.35;"></div>
-    <!-- Estack      Aug 2021–Nov 2021  16.7% → 21.2% -->
-    <div class="timeline-segment" data-target="exp-estack" style="left:16.7%;width:4.5%;background:var(--accent2);opacity:0.65;"></div>
-    <!-- WMT Intern  May 2023–Aug 2023  48.5% → 53% -->
-    <div class="timeline-segment" data-target="exp-wmt-intern" style="left:48.5%;width:4.5%;background:var(--accent);opacity:0.55;"></div>
-    <!-- WMT FT      Jul 2024–Now       69.7% → 100% -->
-    <div class="timeline-segment" data-target="exp-wmt-ft" style="left:69.7%;width:30.3%;background:var(--accent);opacity:0.9;"></div>
+    <!-- Purdue HTF  Sep 2020–May 2021  0% → 11.4% -->
+    <div class="timeline-segment" data-target="exp-htf" style="left:0%;width:11.4%;background:var(--muted);opacity:0.35;"></div>
+    <!-- Estack      Aug 2021–Nov 2021  15.7% → 20.0% -->
+    <div class="timeline-segment" data-target="exp-estack" style="left:15.7%;width:4.3%;background:var(--accent2);opacity:0.65;"></div>
+    <!-- WMT Intern  May 2023–Aug 2023  45.7% → 50.0% -->
+    <div class="timeline-segment" data-target="exp-wmt-intern" style="left:45.7%;width:4.3%;background:var(--accent);opacity:0.55;"></div>
+    <!-- WMT FT      Jul 2024–May 2026  65.7% → 97.1% -->
+    <div class="timeline-segment" data-target="exp-wmt-ft" style="left:65.7%;width:31.4%;background:var(--accent);opacity:0.75;"></div>
+    <!-- JPMC        Jun 2026–Now       97.1% → 100% -->
+    <div class="timeline-segment" data-target="exp-jpmc" style="left:97.1%;width:2.9%;background:#8BB4D6;opacity:0.9;"></div>
 
     <!-- Dots -->
     <div class="timeline-dot muted-dot" data-target="exp-htf" style="left:0%;"></div>
-    <div class="timeline-dot muted-dot" data-target="exp-htf" style="left:12.1%;"></div>
-    <div class="timeline-dot" data-target="exp-estack" style="left:16.7%;background:var(--accent2);"></div>
-    <div class="timeline-dot" data-target="exp-estack" style="left:21.2%;background:var(--accent2);"></div>
-    <div class="timeline-dot accent-dot" data-target="exp-wmt-intern" style="left:48.5%;"></div>
-    <div class="timeline-dot accent-dot" data-target="exp-wmt-intern" style="left:53%;"></div>
-    <div class="timeline-dot accent-dot" data-target="exp-wmt-ft" style="left:69.7%;"></div>
-    <div class="timeline-dot accent-dot pulse" data-target="exp-wmt-ft" style="left:100%;"></div>
+    <div class="timeline-dot muted-dot" data-target="exp-htf" style="left:11.4%;"></div>
+    <div class="timeline-dot" data-target="exp-estack" style="left:15.7%;background:var(--accent2);"></div>
+    <div class="timeline-dot" data-target="exp-estack" style="left:20.0%;background:var(--accent2);"></div>
+    <div class="timeline-dot accent-dot" data-target="exp-wmt-intern" style="left:45.7%;"></div>
+    <div class="timeline-dot accent-dot" data-target="exp-wmt-intern" style="left:50.0%;"></div>
+    <div class="timeline-dot accent-dot" data-target="exp-wmt-ft" style="left:65.7%;"></div>
+    <div class="timeline-dot accent-dot" data-target="exp-wmt-ft" style="left:97.1%;"></div>
+    <div class="timeline-dot" data-target="exp-jpmc" style="left:97.1%;background:#8BB4D6;"></div>
+    <div class="timeline-dot pulse jpmc-pulse" data-target="exp-jpmc" style="left:100%;background:#8BB4D6;"></div>
 
     <!-- Role labels -->
-    <div class="timeline-label above" data-target="exp-htf" style="left:6%;">
+    <div class="timeline-label above" data-target="exp-htf" style="left:5.7%;">
       <span class="timeline-label-role">Frontend Dev</span>
       <span class="timeline-label-company muted-co">Purdue HTF</span>
     </div>
-    <div class="timeline-label below" data-target="exp-estack" style="left:18.9%;">
+    <div class="timeline-label below" data-target="exp-estack" style="left:17.8%;">
       <span class="timeline-label-role">SWE Intern</span>
       <span class="timeline-label-company amber-co">Estack</span>
     </div>
-    <div class="timeline-label above" data-target="exp-wmt-intern" style="left:50.7%;">
+    <div class="timeline-label above" data-target="exp-wmt-intern" style="left:47.8%;">
       <span class="timeline-label-role">SWE Intern</span>
       <span class="timeline-label-company">Walmart</span>
     </div>
-    <div class="timeline-label above" data-target="exp-wmt-ft" style="left:84.8%;">
+    <div class="timeline-label below" data-target="exp-wmt-ft" style="left:81.4%;">
       <span class="timeline-label-role">Software Engineer</span>
       <span class="timeline-label-company">Walmart</span>
+    </div>
+    <div class="timeline-label above" data-target="exp-jpmc" style="left:98.5%;">
+      <span class="timeline-label-role">SWE III</span>
+      <span class="timeline-label-company" style="color:#8BB4D6;">JPMC</span>
     </div>
     <div class="timeline-label below" style="left:100%;">
       <span class="timeline-label-role" style="color:var(--accent);">Now</span>
     </div>
 
     <!-- Year ticks -->
-    <div class="timeline-year" style="left:6.1%;">
+    <div class="timeline-year" style="left:5.7%;">
       <div class="timeline-year-tick"></div>
       <span class="timeline-year-label">'21</span>
     </div>
-    <div class="timeline-year" style="left:24.2%;">
+    <div class="timeline-year" style="left:22.8%;">
       <div class="timeline-year-tick"></div>
       <span class="timeline-year-label">'22</span>
     </div>
-    <div class="timeline-year" style="left:42.4%;">
+    <div class="timeline-year" style="left:40.0%;">
       <div class="timeline-year-tick"></div>
       <span class="timeline-year-label">'23</span>
     </div>
-    <div class="timeline-year" style="left:60.6%;">
+    <div class="timeline-year" style="left:57.1%;">
       <div class="timeline-year-tick"></div>
       <span class="timeline-year-label">'24</span>
     </div>
-    <div class="timeline-year" style="left:78.8%;">
+    <div class="timeline-year" style="left:74.3%;">
       <div class="timeline-year-tick"></div>
       <span class="timeline-year-label">'25</span>
+    </div>
+    <div class="timeline-year" style="left:91.4%;">
+      <div class="timeline-year-tick"></div>
+      <span class="timeline-year-label">'26</span>
     </div>
   </div>
 
   <div class="exp-list">
 
+    <!-- JPMC -->
+    <div class="exp-item reveal" id="exp-jpmc">
+      <div class="exp-main">
+        <span class="exp-num">01</span>
+        <div class="exp-content">
+          <div class="exp-role">Software Engineer III</div>
+          <div class="exp-company">JPMorgan Chase · New Jersey</div>
+          <ul class="exp-bullets">
+            <li>TBA</li>
+          </ul>
+        </div>
+      </div>
+      <div class="exp-meta">
+        <div class="exp-period">Jun 2026<br>— Present</div>
+        <div class="exp-tag current">Current</div>
+      </div>
+      <button class="exp-stack-toggle" aria-expanded="false" aria-controls="stack-jpmc">
+        <i data-lucide="layers"></i> Tech Stack <em class="exp-stack-toggle-arrow">↓</em>
+      </button>
+      <div class="exp-stack" id="stack-jpmc" aria-hidden="true">
+        <div class="exp-stack-inner">
+          <div class="exp-stack-row">
+            <span class="exp-stack-label">Tech Stack</span>
+            <span class="exp-stack-tag">TBA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Walmart FT -->
     <div class="exp-item reveal" id="exp-wmt-ft">
       <div class="exp-main">
-        <span class="exp-num">01</span>
+        <span class="exp-num">02</span>
         <div class="exp-content">
           <div class="exp-role">Software Engineer</div>
           <div class="exp-company">Walmart Global Tech · Bentonville, AR</div>
@@ -1354,8 +1398,8 @@
         </div>
       </div>
       <div class="exp-meta">
-        <div class="exp-period">Jul 2024<br>— Present</div>
-        <div class="exp-tag current">Current</div>
+        <div class="exp-period">Jul 2024<br>— May 2026</div>
+        <div class="exp-tag">1y 10m</div>
       </div>
       <button class="exp-stack-toggle" aria-expanded="false" aria-controls="stack-wmt-ft">
         <i data-lucide="layers"></i> Tech Stack <em class="exp-stack-toggle-arrow">↓</em>
@@ -1395,7 +1439,7 @@
     <!-- Walmart Intern -->
     <div class="exp-item reveal reveal-delay-1" id="exp-wmt-intern">
       <div class="exp-main">
-        <span class="exp-num">02</span>
+        <span class="exp-num">03</span>
         <div class="exp-content">
           <div class="exp-role">Software Engineer Intern</div>
           <div class="exp-company">Walmart Global Tech · Bentonville, AR</div>
@@ -1441,7 +1485,7 @@
     <!-- Estack -->
     <div class="exp-item reveal reveal-delay-2" id="exp-estack">
       <div class="exp-main">
-        <span class="exp-num">03</span>
+        <span class="exp-num">04</span>
         <div class="exp-content">
           <div class="exp-role">Software Engineer Intern</div>
           <div class="exp-company">Estack · Tbilisi, GE</div>
@@ -1482,7 +1526,7 @@
     <!-- Purdue HTF -->
     <div class="exp-item reveal reveal-delay-3" id="exp-htf">
       <div class="exp-main">
-        <span class="exp-num">04</span>
+        <span class="exp-num">05</span>
         <div class="exp-content">
           <div class="exp-role">Frontend Developer</div>
           <div class="exp-company">Purdue Hack The Future · West Lafayette, IN</div>
